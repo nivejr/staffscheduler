@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    .center {       
+		text-align-last: center
+		;
+}   
+	.customBtn {
+	font-size: 16px;
+	padding: 15px 32px;
+	text-align: center;
+	font-weight: bold;
+	border: solid;
+	color: white;
+	background-color: rgba(7, 124, 7, 0.966);
+	font-family:cursive;
+	border-radius: 12px;
+
+}
+	.brown{
+		color:black;
+	}
+
+	.table{
+  border: solid;
+  border-width: thick;
+  border-color : brown;
+}
+
+.td {
+border-width: 4px;
+text-align : "center";
+border-color : whitesmoke;
+color : brown;
+font-weight: bold;
+font-size: 16px;
+font-family:cursive;
+box-shadow: 2px 2px 15px -2px brown;
+}
+.td2 {
+border-width: 4px;
+text-align : "center";
+border-color : whitesmoke;
+color : rgb(44, 105, 197);
+font-weight: bold;
+font-size: 16px;
+font-family:cursive;
+box-shadow: 2px 2px 15px -2px rgb(44, 105, 197);
+}
+.td3 {
+border-width: 4px;
+text-align : "center";
+border-color : whitesmoke;
+color : rgb(250, 242, 242);
+font-weight: bold;
+font-size: 16px;
+font-family:cursive;
+box-shadow: 2px 2px 15px -2px rgb(6, 6, 6);
+}
+.th {
+	border: 1px solid whitesmoke;
+  	border-collapse: collapse;
+	font-family:cursive;
+}
+h1 {text-align: center;font-size:30px;font-family:cursive;border: solid;color:white;background-color: brown;}
+    </style>
+</style>
+<body>
+	<form>
+		<h1> DISTRIBUTION STAFF SCHEDULE </h1>
+		
+		<table class="table" cellspacing="3" align="center" border="10" >
+			<tr id="day">
+				<td align="center" height="50" width="100"  border-color= "white" color = "black" class="td3" bgcolor="grey">
+					<b>Staff / Day</b>
+				</td>
+				<td align="center" height="50" width="100"  class="td2">
+					<b>Sunday</b>
+				</td>
+				<td align="center" height="50" width="100" class="td2" >
+					<b>Monday</b>
+				</td>
+				<td align="center" height="50" width="100"  class="td2" >
+					<b>Tuesday</b>
+				</td>
+				<td align="center" height="50" width="100"   class="td2">
+					<b>Wednesday</b>
+				</td>
+				<td align="center" height="50" width="100"   class="td2">
+					<b>Thursday</b>
+				</td>
+				<td align="center" height="50" width="100"  class="td2">
+					<b>Friday</b>
+				</td>
+				<td align="center" height="50" width="100"  class="td2" >
+					<b>Saturday</b>
+				</td>
+
+			</tr>
+		
+			<tr>
+				<td  align="center"  height="50" class="td">
+					<b>Ross (Lead)</b>
+				</td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="R1">
+						<option value = 'Off' selected>Off</option>
+						<option value = 'PTO' >PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th" >
+					<select id="R2">
+						<option value= 'AM' selected>7:00</option>
+						<option value= 'PTO' >PTO</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off' selected>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="R3">
+						<option value= 'AM' selected>7:00</option>
+						<option value= "PTO">PTO</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off' selected>Off</option>
+					</select></td> 
+				<td align="center" height="50" bgcolor="lightblue" class="th" >	
+					<select id="R4">
+					<option value= 'AM' selected>7:00</option>
+					<option value= "PTO">PTO</option>
+					<option value = 'AM'>8:00</option>
+					<option value = 'AM'>9:00</option>
+					<option value = 'AM'>11:00</option>
+					<option value = 'PM'>12:00</option>
+					<option value = 'PM'>15:00</option>
+					<option value = 'PM'>17:00</option>
+					<option value = 'Night'>23:00</option>
+					<option value = 'Off' selected>Off</option>
+				</select></td> 
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="R5">
+						<option value='AM' selected>7:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off' selected>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th">
+					<select id="R6">
+						<option value='AM' selected>7:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off' selected>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="R7">
+						<option value='Off' selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off' selected>Off</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td align="center" height="50" class="td">
+					<b>Jon</b>
+				</td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="J1">
+						<option value='Off'  selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th" >
+					<select id="J2">
+						<option value= 'AM' selected>7:00</option>
+						<option value="PTO"> PTO</option>
+						<option value = 'Off'>Off</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="J3">
+						<option value='AM' selected>7:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'Off'>Off</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td> 
+				<td align="center" height="50" bgcolor="lightblue" class="th">	
+					<select id="J4">
+					<option value='AM' selected>7:00</option>
+					<option value="PTO">PTO</option>
+					<option value = 'Off'>Off</option>
+					<option value = 'AM'>8:00</option>
+					<option value = 'AM'>9:00</option>
+					<option value = 'AM'>11:00</option>
+					<option value = 'PM'>12:00</option>
+					<option value = 'PM'>15:00</option>
+					<option value = 'PM'>17:00</option>
+					<option value = 'Night'>23:00</option>
+				</select></td> 
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="J5">
+						<option value='AM' selected>7:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'Off'>Off</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th">
+					<select id="J6">
+						<option value='AM' selected>7:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'Off'>Off</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="J7">
+						<option value='Off'  selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td align="center" height="50" class="td">
+					<b>Lailah</b>
+				</td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="L1">
+						<option value='AM' selected>8:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value='Off' >Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th" >
+					<select id="L2">
+						<option value='AM' selected>9:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value='Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="L3">
+						<option value='AM' selected>9:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value='Off'>Off</option>
+					</select></td> 
+				<td align="center" height="50" bgcolor="lightblue" class="th" >	
+					<select id="L4">
+					<option value='AM' selected>9:00</option>
+					<option value="PTO">PTO</option>
+					<option value = 'AM'>7:00</option>
+					<option value = 'AM'>8:00</option>
+					<option value = 'AM'>11:00</option>
+					<option value = 'PM'>12:00</option>
+					<option value = 'PM'>15:00</option>
+					<option value = 'PM'>17:00</option>
+					<option value = 'Night'>23:00</option>
+					<option value='Off'>Off</option>
+				</select></td> 
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="L5">
+						<option value='AM' selected>9:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value='Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th">
+					<select id="L6">
+						<option value='Off'  selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="L7">
+						<option value='Off'  selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td align="center" height="50" class="td">
+					<b>Eliza</b>
+				</td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th" >
+					<select id="E1">
+						<option value='Off' selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th" >
+					<select id="E2">
+						<option value='Off'  selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="E3">
+						<option value='PM' selected>12:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td> 
+				<td align="center" height="50" bgcolor="lightblue" class="th" >	
+					<select id="E4">
+					<option value='PM' selected>12:00</option>
+					<option value="PTO">PTO</option>
+					<option value = 'AM'>7:00</option>
+					<option value = 'AM'>8:00</option>
+					<option value = 'AM'>9:00</option>
+					<option value = 'AM'>11:00</option>
+					<option value = 'PM'>15:00</option>
+					<option value = 'PM'>17:00</option>
+					<option value = 'Night'>23:00</option>
+					<option value = 'Off'>Off</option>
+				</select></td> 
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="E5">
+						<option value='PM' selected>12:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th">
+					<select id="E6">
+						<option value='AM' selected>11:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="E7">
+						<option value='AM' selected>7:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td align="center" height="50" class="td">
+					<b>Archana</b>
+				</td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th" >
+					<select id="A1">
+						<option value='Off' selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th"  >
+					<select id="A2">
+						<option value='PM' selected>15:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>						
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="A3">
+						<option value='PM' selected>15:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>						
+					</select></td> 
+				<td align="center" height="50" bgcolor="lightblue" class="th" >	
+					<select id="A4">
+					<option value='PM' selected>15:00</option>
+					<option value="PTO">PTO</option>
+					<option value = 'AM'>7:00</option>
+					<option value = 'AM'>8:00</option>
+					<option value = 'AM'>9:00</option>
+					<option value = 'AM'>11:00</option>
+					<option value = 'PM'>12:00</option>
+					<option value = 'PM'>17:00</option>
+					<option value = 'Night'>23:00</option>
+					<option value = 'Off'>Off</option>
+				</select></td> 
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="A5">
+						<option value='PM' selected>15:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>						
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th">
+					<select id="A6">
+						<option value='PM' selected>15:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>					
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="A7">
+						<option value='Off' selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+
+
+			</tr>
+			<tr>
+				<td  align="center" height="50" class="td">
+					<b>Jeremy</b>
+				</td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="Je1">
+						<option value='Night' selected> 23:00 </option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th" >
+					<select id="Je2">
+						<option value='Night' selected>23:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="Je3">
+						<option value='Night' selected>23:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td> 
+				<td align="center" height="50" bgcolor="lightblue" class="th" >	
+					<select id="Je4">
+					<option value='Night' selected>23:00</option>
+					<option value="PTO">PTO</option>
+					<option value = 'AM'>7:00</option>
+					<option value = 'AM'>8:00</option>
+					<option value = 'AM'>9:00</option>
+					<option value = 'AM'>11:00</option>
+					<option value = 'PM'>12:00</option>
+					<option value = 'PM'>15:00</option>
+					<option value = 'PM'>17:00</option>
+					<option value = 'Off'>Off</option>
+				</select></td> 
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="Je5">
+						<option value='Night' selected>23:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th">
+					<select id="Je6">
+						<option value= 'Off'  selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="Je7">
+						<option value='Off' selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td  align="center" height="50" class="td">
+					<b>New Staff </b>
+				</td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="N1">
+						<option value= 'PM' selected>15:00</option>
+						<option value= "PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th" >
+					<select id="N2">
+						<option value='PM' selected>15:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="N3">
+						<option value='PM' selected>15:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td> 
+				<td align="center" height="50" bgcolor="lightblue" class="th" >	
+					<select id="N4">
+					<option value= 'Off' selected>Off</option>
+					<option value="PTO">PTO</option>
+					<option value = 'AM'>7:00</option>
+					<option value = 'AM'>8:00</option>
+					<option value = 'AM'>9:00</option>
+					<option value = 'AM'>11:00</option>
+					<option value = 'PM'>12:00</option>
+					<option value = 'PM'>15:00</option>
+					<option value = 'PM'>17:00</option>
+					<option value = 'Night'>23:00</option>
+				</select></td> 
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="N5">
+						<option value= 'Off' selected>Off</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Night'>23:00</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="lightblue" class="th">
+					<select id="N6">
+						<option value='Night' selected>23:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'PM'>17:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+				<td align="center" height="50" bgcolor="#E4A9A4" class="th">
+					<select id="N7">
+						<option value='PM' selected>17:00</option>
+						<option value="PTO">PTO</option>
+						<option value = 'AM'>7:00</option>
+						<option value = 'AM'>8:00</option>
+						<option value = 'AM'>9:00</option>
+						<option value = 'AM'>11:00</option>
+						<option value = 'PM'>12:00</option>
+						<option value = 'PM'>15:00</option>
+						<option value = 'Night'>23:00</option>
+						<option value = 'Off'>Off</option>
+					</select></td>
+			</tr>
+			</table>
+			<br></br>	
+			<div class="center">&nbsp;
+				<input type="button" class="customBtn"  style="cursor:pointer;" id="sub" value="CHECK !" onclick="res();"> 				
+				<br></br>						
+							<b><p id="sun_result"></p></b>											
+							<b><p id="mon_result"></p></b>								
+							<b><p id="tue_result"></p></b>						
+							<b><p id="wed_result"></p></b>						
+							<b><p id="thu_result"></p></b>						
+							<b><p id="fri_result"></p></b>				
+							<b><p id="sat_result"></p></b>
+
+			</div>&nbsp;	
+			</table>		
+			
+
+
+
+
+	</form>
+	<script>	
+	function res()
+	{
+		var totalSun = document.getElementById("R1").value + document.getElementById("J1").value + document.getElementById("L1").value + document.getElementById("E1").value + document.getElementById("A1").value + document.getElementById("Je1").value + document.getElementById("N1").value;		
+		var totalMon = document.getElementById("R2").value + document.getElementById("J2").value + document.getElementById("L2").value + document.getElementById("E2").value + document.getElementById("A2").value + document.getElementById("Je2").value + document.getElementById("N2").value;		
+		var totalTue = document.getElementById("R3").value + document.getElementById("J3").value + document.getElementById("L3").value + document.getElementById("E3").value + document.getElementById("A3").value + document.getElementById("Je3").value + document.getElementById("N3").value;		
+		var totalWed = document.getElementById("R4").value + document.getElementById("J4").value + document.getElementById("L4").value + document.getElementById("E4").value + document.getElementById("A4").value + document.getElementById("Je4").value + document.getElementById("N4").value;		
+		var totalThu = document.getElementById("R5").value + document.getElementById("J5").value + document.getElementById("L5").value + document.getElementById("E5").value + document.getElementById("A5").value + document.getElementById("Je5").value + document.getElementById("N5").value;		
+		var totalFri = document.getElementById("R6").value + document.getElementById("J6").value + document.getElementById("L6").value + document.getElementById("E6").value + document.getElementById("A6").value + document.getElementById("Je6").value + document.getElementById("N6").value;		
+		var totalSat = document.getElementById("R7").value + document.getElementById("J7").value + document.getElementById("L7").value + document.getElementById("E7").value + document.getElementById("A7").value + document.getElementById("Je7").value + document.getElementById("N7").value;		
+		var sun_result = [];
+
+		if(totalSun.includes("AM") == true && totalSun.includes("PM") == true && totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : All good 👍";
+		} else if (totalSun.includes("AM") == true && totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : Add a staff in Night shift ⚠️";
+		} else if (totalSun.includes("AM") == true && !totalSun.includes("PM")== true && totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : Add a staff in PM shift ⚠️";
+		} else if (totalSun.includes("AM") == true && !totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : Add a staff in PM and Night shift ⚠️⚠️";
+		} else if (!totalSun.includes("AM") == true && totalSun.includes("PM")== true && totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : Add a staff in AM shift ⚠️";
+		} else if (!totalSun.includes("AM") == true && totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : Add a staff in AM and Night shift ⚠️⚠️";
+		}else if (!totalSun.includes("AM") == true && !totalSun.includes("PM")== true && totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : Add a staff in AM and PM shift ⚠️⚠️";
+		}else if (!totalSun.includes("AM") == true && !totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
+		{
+			sun_result = "Sunday : Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+		}
+			
+		document.getElementById("sun_result").innerHTML= sun_result
+
+		if(totalMon.includes("AM") == true && totalMon.includes("PM") == true && totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday : All good 👍";
+		} else if (totalMon.includes("AM") == true && totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday : Add a staff in Night shift ⚠️";
+		} else if (totalMon.includes("AM") == true && !totalMon.includes("PM")== true && totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday : Add a staff in PM shift ⚠️";
+		} else if (totalMon.includes("AM") == true && !totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday :Add a staff in PM and Night shift ⚠️⚠️";
+		} else if (!totalMon.includes("AM") == true && totalMon.includes("PM")== true && totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday : Add a staff in AM shift ⚠️";
+		} else if (!totalMon.includes("AM") == true && totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday : Add a staff in AM and Night shift ⚠️⚠️";
+		}else if (!totalMon.includes("AM") == true && !totalMon.includes("PM")== true && totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday : Add a staff in AM and PM shift ⚠️⚠️";
+		}else if (!totalMon.includes("AM") == true && !totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
+		{
+			mon_result = "Monday : Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+		}
+
+		document.getElementById("mon_result").innerHTML= mon_result
+
+		if(totalTue.includes("AM") == true && totalTue.includes("PM") == true && totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : All good 👍";
+		} else if (totalTue.includes("AM") == true && totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : Add a staff in Night shift ⚠️";
+		} else if (totalTue.includes("AM") == true && !totalTue.includes("PM")== true && totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : Add a staff in PM shift ⚠️";
+		} else if (totalTue.includes("AM") == true && !totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : Add a staff in PM and Night shift ⚠️⚠️";
+		} else if (!totalTue.includes("AM") == true && totalTue.includes("PM")== true && totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : Add a staff in AM shift ⚠️";
+		} else if (!totalTue.includes("AM") == true && totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : Add a staff in AM and Night shift ⚠️⚠️";
+		}else if (!totalTue.includes("AM") == true && !totalTue.includes("PM")== true && totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : Add a staff in AM and PM shift ⚠️⚠️";
+		}else if (!totalTue.includes("AM") == true && !totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
+		{
+			tue_result = "Tuesday : Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+		}
+
+		document.getElementById("tue_result").innerHTML= tue_result
+		
+		if(totalWed.includes("AM") == true && totalWed.includes("PM") == true && totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : All good 👍";
+		} else if (totalWed.includes("AM") == true && totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : Add a staff in Night shift ⚠️";
+		} else if (totalWed.includes("AM") == true && !totalWed.includes("PM")== true && totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : Add a staff in PM shift ⚠️";
+		} else if (totalWed.includes("AM") == true && !totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : Add a staff in PM and Night shift ⚠️⚠️";
+		} else if (!totalWed.includes("AM") == true && totalWed.includes("PM")== true && totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : Add a staff in AM shift⚠️";
+		} else if (!totalWed.includes("AM") == true && totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : Add a staff in AM and Night shift ⚠️⚠️";
+		}else if (!totalWed.includes("AM") == true && !totalWed.includes("PM")== true && totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : Add a staff in AM and PM shift ⚠️⚠️";
+		}else if (!totalWed.includes("AM") == true && !totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
+		{
+			wed_result = "Wednesday : Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+		}
+
+		document.getElementById("wed_result").innerHTML= wed_result
+
+		if(totalThu.includes("AM") == true && totalThu.includes("PM") == true && totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : All good 👍";
+		} else if (totalThu.includes("AM") == true && totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : Add a staff in Night shift ⚠️";
+		} else if (totalThu.includes("AM") == true && !totalThu.includes("PM")== true && totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : Add a staff in PM shift ⚠️";
+		} else if (totalThu.includes("AM") == true && !totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : Add a staff in PM and Night shift ⚠️⚠️";
+		} else if (!totalThu.includes("AM") == true && totalThu.includes("PM")== true && totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : Add a staff in AM shift ⚠️";
+		} else if (!totalThu.includes("AM") == true && totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : Add a staff in AM and Night shift ⚠️⚠️";
+		}else if (!totalThu.includes("AM") == true && !totalThu.includes("PM")== true && totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : Add a staff in AM and PM shift ⚠️⚠️";
+		}else if (!totalThu.includes("AM") == true && !totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
+		{
+			thu_result = "Thursday : Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+		}
+
+		document.getElementById("thu_result").innerHTML= thu_result
+
+		
+		if(totalFri.includes("AM") == true && totalFri.includes("PM") == true && totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : All good 👍";
+		} else if (totalFri.includes("AM") == true && totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : Add a staff in Night shift ⚠️";
+		} else if (totalFri.includes("AM") == true && !totalFri.includes("PM")== true && totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : Add a staff in PM shift ⚠️";
+		} else if (totalFri.includes("AM") == true && !totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : Add a staff in PM and Night shift ⚠️⚠️";
+		} else if (!totalFri.includes("AM") == true && totalFri.includes("PM")== true && totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : Add a staff in AM shift ⚠️";
+		} else if (!totalFri.includes("AM") == true && totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : Add a staff in AM and Night shift ⚠️⚠️";
+		}else if (!totalFri.includes("AM") == true && !totalFri.includes("PM")== true && totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : Add a staff in AM and PM shift ⚠️⚠️";
+		}else if (!totalFri.includes("AM") == true && !totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
+		{
+			fri_result = "Friday : Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+		}
+
+		document.getElementById("fri_result").innerHTML= fri_result
+
+		if(totalSat.includes("AM") == true && totalSat.includes("PM") == true && totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : All good 👍";
+		} else if (totalSat.includes("AM") == true && totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : Add a staff in Night shift ⚠️";
+		} else if (totalSat.includes("AM") == true && !totalSat.includes("PM")== true && totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : Add a staff in PM shift ⚠️";
+		} else if (totalSat.includes("AM") == true && !totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : Add a staff in PM and Night shift ⚠️⚠️";
+		} else if (!totalSat.includes("AM") == true && totalSat.includes("PM")== true && totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : Add a staff in AM shift ⚠️";
+		} else if (!totalSat.includes("AM") == true && totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : Add a staff in AM and Night shift ⚠️⚠️";
+		}else if (!totalSat.includes("AM") == true && !totalSat.includes("PM")== true && totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : Add a staff in AM and PM shift ⚠️⚠️";
+		}else if (!totalSat.includes("AM") == true && !totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
+		{
+			sat_result = "Saturday : Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+		}
+
+		document.getElementById("sat_result").innerHTML= sat_result
+	}
+	</script>
+</body>
+
+
+</html>
