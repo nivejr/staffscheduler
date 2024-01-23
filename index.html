@@ -32,6 +32,10 @@ p {
   box-shadow: 2px 2px 2px -2px rgb(246, 190, 118)
 }
 
+.result {
+display: none;
+}
+
 .td {
 border-width: 4px;
 text-align : "center";
@@ -782,22 +786,41 @@ h1 {text-align: center;font-size:30px;font-family:cursive;border: solid;color:wh
 			<br></br>	
 			<div class="center">
 				<input type="button" class="customBtn"  style="cursor:pointer;" id="sub" value="CHECK !" onclick="res();"> 				
-				<br></br>						
-							<p id="sun_result"></p>										
-							<p id="mon_result"></p>								
-							<p id="tue_result"></p>					
-							<p id="wed_result"></p>					
-							<p id="thu_result"></p>						
-							<p id="fri_result"></p>			
-							<p id="sat_result"></p>
-
-			</div>;		
+				<br></br>	
+										
+			</div>;	
 			
+			<div id="show" class="result">
+				<table id= "result"   align="center" border="5" >
+					<tr>
+						<th>Day</th>
+						<th>Suggestion</th>
+					</tr>
+						<tr> <td align="center">Sunday </td>
+							<td align="center" id="sun_result"></td>
+						</tr>
+						<tr> <td align="center">Monday </td>
+							<td align="center" id="mon_result"></td>
+						</tr>
+						<tr> <td align="center">Tuesday </td>
+							<td align="center" id="tue_result"></td>
+						</tr>
+						<tr> <td align="center"> Wednesday </td>
+							<td align="center" id="wed_result"></td>
+						</tr>
+						<tr> <td align="center">Thursday </td>
+							<td align="center" id="thu_result"></td>
+						</tr>
+						<tr> <td align="center">Friday </td>
+							<td align="center" id="fri_result"></td>
+						</tr>
+						<tr> <td align="center">Saturday </td>
+							<td align="center" id="sat_result"></td>
+						</tr>
 
 
-
-
-	</form>
+				</table>
+			</div>
 	<script>	
 	function res()
 	{
@@ -810,125 +833,126 @@ h1 {text-align: center;font-size:30px;font-family:cursive;border: solid;color:wh
 		var totalSat = document.getElementById("R7").value + document.getElementById("J7").value + document.getElementById("L7").value + document.getElementById("E7").value + document.getElementById("A7").value + document.getElementById("Je7").value + document.getElementById("N7").value;		
 		var sun_result = [];
 
+		document.getElementById("show").style.display = 'block';
+
 		if(totalSun.includes("AM") == true && totalSun.includes("PM") == true && totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔ All good 👍";
+			sun_result =  "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔ All good 👍";
 			
 		} else if (totalSun.includes("AM") == true && totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in Night shift ⚠️";
+			sun_result =  "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in Night shift ⚠️";
 
 		} else if (totalSun.includes("AM") == true && !totalSun.includes("PM")== true && totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔   Add a staff in PM shift ⚠️";
+			sun_result =  "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔   Add a staff in PM shift ⚠️";
 
 		} else if (totalSun.includes("AM") == true && !totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in PM and Night shift ⚠️⚠️";
+			sun_result =  "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in PM and Night shift ⚠️⚠️";
 
 		} else if (!totalSun.includes("AM") == true && totalSun.includes("PM")== true && totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM shift ⚠️";
+			sun_result =  "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM shift ⚠️";
 
 		} else if (!totalSun.includes("AM") == true && totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM and Night shift ⚠️⚠️";
+			sun_result = "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM and Night shift ⚠️⚠️";
 
 		}else if (!totalSun.includes("AM") == true && !totalSun.includes("PM")== true && totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM and PM shift ⚠️⚠️";
+			sun_result =  "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM and PM shift ⚠️⚠️";
 
 		}else if (!totalSun.includes("AM") == true && !totalSun.includes("PM")== true && !totalSun.includes("Night")== true)
 		{
-			sun_result = "Sunday : " + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+			sun_result =  + "AM = "+(totalSun.match(/AM/g) || []).length + "; PM = "+(totalSun.match(/PM/g) || []).length + "; Night = "+(totalSun.match(/Night/g) || []).length + " ➔  Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
 
 		}
-			
 		document.getElementById("sun_result").innerHTML= sun_result
 		
 
 		if(totalMon.includes("AM") == true && totalMon.includes("PM") == true && totalMon.includes("Night")== true)
 		{
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ All good 👍";
+			mon_result =  "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ All good 👍";
 
 		} else if (totalMon.includes("AM") == true && totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
 		{
 
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
+			mon_result = "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
 		} else if (totalMon.includes("AM") == true && !totalMon.includes("PM")== true && totalMon.includes("Night")== true)
 		{
 
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
+			mon_result = "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
 
 		} else if (totalMon.includes("AM") == true && !totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
 		{
 
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
+			mon_result = "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
 
 		} else if (!totalMon.includes("AM") == true && totalMon.includes("PM")== true && totalMon.includes("Night")== true)
 		{
 
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
+			mon_result =  "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
 
 		} else if (!totalMon.includes("AM") == true && totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
 		{
 
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
+			mon_result = "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
 
 		}else if (!totalMon.includes("AM") == true && !totalMon.includes("PM")== true && totalMon.includes("Night")== true)
 		{
 
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
+			mon_result ="AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
 
 		}else if (!totalMon.includes("AM") == true && !totalMon.includes("PM")== true && !totalMon.includes("Night")== true)
 		{
 
-			mon_result = "Monday : " + "AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+			mon_result ="AM = "+(totalMon.match(/AM/g) || []).length + "; PM = "+(totalMon.match(/PM/g) || []).length + "; Night = "+(totalMon.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
 		}
 
 		document.getElementById("mon_result").innerHTML= mon_result
 
 		if(totalTue.includes("AM") == true && totalTue.includes("PM") == true && totalTue.includes("Night")== true)
 		{
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ All good 👍";
+			tue_result = "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ All good 👍";
 			
 		} else if (totalTue.includes("AM") == true && totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
 		{
 
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
+			tue_result = "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
 
 		} else if (totalTue.includes("AM") == true && !totalTue.includes("PM")== true && totalTue.includes("Night")== true)
 		{
 
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
+			tue_result =  "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
 
 
 		} else if (totalTue.includes("AM") == true && !totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
 		{
 
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
+			tue_result = "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
 
 
 		} else if (!totalTue.includes("AM") == true && totalTue.includes("PM")== true && totalTue.includes("Night")== true)
 		{
 
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
+			tue_result =  "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
 
 		} else if (!totalTue.includes("AM") == true && totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
 		{
 
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
+			tue_result =  "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
 
 
 		}else if (!totalTue.includes("AM") == true && !totalTue.includes("PM")== true && totalTue.includes("Night")== true)
 		{
 	
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
+			tue_result = "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
 
 		}else if (!totalTue.includes("AM") == true && !totalTue.includes("PM")== true && !totalTue.includes("Night")== true)
 		{
 	
-			tue_result = "Tuesday : " + "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+			tue_result =  "AM = "+(totalTue.match(/AM/g) || []).length + "; PM = "+(totalTue.match(/PM/g) || []).length + "; Night = "+(totalTue.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
 
 
 		}
@@ -937,43 +961,43 @@ h1 {text-align: center;font-size:30px;font-family:cursive;border: solid;color:wh
 		
 		if(totalWed.includes("AM") == true && totalWed.includes("PM") == true && totalWed.includes("Night")== true)
 		{
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ All good 👍";
+			wed_result =  "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ All good 👍";
 
 
 		} else if (totalWed.includes("AM") == true && totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
 		{
 
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
+			wed_result = "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
 
 		} else if (totalWed.includes("AM") == true && !totalWed.includes("PM")== true && totalWed.includes("Night")== true)
 		{
 
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
+			wed_result = "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
 
 		} else if (totalWed.includes("AM") == true && !totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
 		{
 
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
+			wed_result =  "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
 
 		} else if (!totalWed.includes("AM") == true && totalWed.includes("PM")== true && totalWed.includes("Night")== true)
 		{
 	
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM shift⚠️";
+			wed_result = "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM shift⚠️";
 
 		} else if (!totalWed.includes("AM") == true && totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
 		{
 	
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
+			wed_result =  "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
 
 		}else if (!totalWed.includes("AM") == true && !totalWed.includes("PM")== true && totalWed.includes("Night")== true)
 		{
 
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
+			wed_result =  "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
 
 		}else if (!totalWed.includes("AM") == true && !totalWed.includes("PM")== true && !totalWed.includes("Night")== true)
 		{
 
-			wed_result = "Wednesday : "+ "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+			wed_result =  "AM = "+(totalWed.match(/AM/g) || []).length + "; PM = "+(totalWed.match(/PM/g) || []).length + "; Night = "+(totalWed.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
 
 		}
 
@@ -981,42 +1005,42 @@ h1 {text-align: center;font-size:30px;font-family:cursive;border: solid;color:wh
 
 		if(totalThu.includes("AM") == true && totalThu.includes("PM") == true && totalThu.includes("Night")== true)
 		{
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ All good 👍";
+			thu_result =  "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ All good 👍";
 
 		} else if (totalThu.includes("AM") == true && totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
 		{
 
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
+			thu_result = "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
 
 		} else if (totalThu.includes("AM") == true && !totalThu.includes("PM")== true && totalThu.includes("Night")== true)
 		{
 
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
+			thu_result = "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
 
 		} else if (totalThu.includes("AM") == true && !totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
 		{
 
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
+			thu_result = "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
 	
 		} else if (!totalThu.includes("AM") == true && totalThu.includes("PM")== true && totalThu.includes("Night")== true)
 		{
 
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
+			thu_result =  "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
 
 		} else if (!totalThu.includes("AM") == true && totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
 		{
 	
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
+			thu_result =  "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
 
 		}else if (!totalThu.includes("AM") == true && !totalThu.includes("PM")== true && totalThu.includes("Night")== true)
 		{
 
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
+			thu_result = "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
 
 		}else if (!totalThu.includes("AM") == true && !totalThu.includes("PM")== true && !totalThu.includes("Night")== true)
 		{
 
-			thu_result = "Thursday : "+ "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+			thu_result = "AM = "+(totalThu.match(/AM/g) || []).length + "; PM = "+(totalThu.match(/PM/g) || []).length + "; Night = "+(totalThu.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
 		}
 
 		document.getElementById("thu_result").innerHTML= thu_result
@@ -1024,38 +1048,38 @@ h1 {text-align: center;font-size:30px;font-family:cursive;border: solid;color:wh
 		
 		if(totalFri.includes("AM") == true && totalFri.includes("PM") == true && totalFri.includes("Night")== true)
 		{
-			fri_result = "Friday : "+ "AM = "+ (totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ All good 👍";
+			fri_result = "AM = "+ (totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ All good 👍";
 			
 		} else if (totalFri.includes("AM") == true && totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
 		{
-			fri_result = "Friday : "+ "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
+			fri_result =  "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
 
 		} else if (totalFri.includes("AM") == true && !totalFri.includes("PM")== true && totalFri.includes("Night")== true)
 		{
-			fri_result = "Friday : "+ "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
+			fri_result =  "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
 
 		} else if (totalFri.includes("AM") == true && !totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
 		{
-			fri_result = "Friday : "+ "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
+			fri_result =  "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
 
 		} else if (!totalFri.includes("AM") == true && totalFri.includes("PM")== true && totalFri.includes("Night")== true)
 		{
-			fri_result = "Friday : "+ "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
+			fri_result =  "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
 
 		} else if (!totalFri.includes("AM") == true && totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
 		{
 
-			fri_result = "Friday : "+ "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
+			fri_result = "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
 
 		}else if (!totalFri.includes("AM") == true && !totalFri.includes("PM")== true && totalFri.includes("Night")== true)
 		{
 
-			fri_result = "Friday : "+ "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
+			fri_result =  "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
 
 		}else if (!totalFri.includes("AM") == true && !totalFri.includes("PM")== true && !totalFri.includes("Night")== true)
 		{
 
-			fri_result = "Friday : "+ "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+			fri_result = "AM = "+(totalFri.match(/AM/g) || []).length + "; PM = "+(totalFri.match(/PM/g) || []).length + "; Night = "+(totalFri.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
 
 		}
 
@@ -1063,39 +1087,39 @@ h1 {text-align: center;font-size:30px;font-family:cursive;border: solid;color:wh
 
 		if(totalSat.includes("AM") == true && totalSat.includes("PM") == true && totalSat.includes("Night")== true)
 		{
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ All good 👍";
+			sat_result =  "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ All good 👍";
 
 		} else if (totalSat.includes("AM") == true && totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
 		{
 
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
+			sat_result = "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in Night shift ⚠️";
 
 		} else if (totalSat.includes("AM") == true && !totalSat.includes("PM")== true && totalSat.includes("Night")== true)
 		{
 
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
+			sat_result = "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in PM shift ⚠️";
 
 		} else if (totalSat.includes("AM") == true && !totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
 		{
 
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
+			sat_result = "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in PM and Night shift ⚠️⚠️";
 
 		} else if (!totalSat.includes("AM") == true && totalSat.includes("PM")== true && totalSat.includes("Night")== true)
 		{
 
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
+			sat_result = "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM shift ⚠️";
 
 		} else if (!totalSat.includes("AM") == true && totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
 		{
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
+			sat_result = "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM and Night shift ⚠️⚠️";
 
 		}else if (!totalSat.includes("AM") == true && !totalSat.includes("PM")== true && totalSat.includes("Night")== true)
 		{
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
+			sat_result =  "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM and PM shift ⚠️⚠️";
 
 		}else if (!totalSat.includes("AM") == true && !totalSat.includes("PM")== true && !totalSat.includes("Night")== true)
 		{
-			sat_result = "Saturday : "+ "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
+			sat_result =  "AM = "+(totalSat.match(/AM/g) || []).length + "; PM = "+(totalSat.match(/PM/g) || []).length + "; Night = "+(totalSat.match(/Night/g) || []).length + " ➔ Add a staff in AM, PM and Night shift ⚠️⚠️⚠️";
 
 		}
 
